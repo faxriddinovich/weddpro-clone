@@ -1,0 +1,62 @@
+{
+  "dashboard": {
+    "title": "Панель управления",
+    "buyurtmalar_statistikasi": "Статистика заказов",
+    "buyurtmalar": "заказов",
+    "har_hafta": "Еженедельно",
+    "har_oy": "Ежемесячно",
+    "yillik": "Ежегодно"
+  },
+  "navigation": {
+    "dashboard": "Панель управления",
+    "leaderboard": "Таблица лидеров",
+    "order": "Заказ",
+    "products": "Продукты",
+    "sales_report": "Отчет о продажах",
+    "messages": "Сообщения",
+    "settings": "Настройки",
+    "sign_out": "Выйти"
+  },
+  "sources": {
+    "telegram_bot": "Telegram бот",
+    "veb_sayt": "Веб-сайт",
+    "click": "Клик",
+    "bot_yaratish": "Создать бота",
+    "veb_sayt_yaratish": "Создать сайт",
+    "ariza_yuborish": "Отправить заявку"
+  },
+  "stats": {
+    "total_sales": "Общие продажи",
+    "total_orders": "Общие заказы",
+    "customers": "Клиенты",
+    "daily": "Ежедневно",
+    "weekly": "Еженедельно",
+    "monthly": "Ежемесячно",
+    "yearly": "Ежегодно"
+  },
+  "top_products": {
+    "title": "Топ 10 продуктов",
+    "interval": "Интервал",
+    "kunlik": "Ежедневно",
+    "haftalik": "Еженедельно",
+    "oylik": "Ежемесячно",
+    "yillik": "Ежегодно",
+    "dona_sotilgan": "единиц продано"
+  },
+  "header": {
+    "search_placeholder": "Поиск...",
+    "language": "Язык",
+    "notifications": "Уведомления",
+    "profile": "Профиль",
+    "admin": "Админ"
+  },
+  "common": {
+    "loading": "Загрузка...",
+    "error": "Произошла ошибка",
+    "save": "Сохранить",
+    "cancel": "Отмена",
+    "delete": "Удалить",
+    "edit": "Редактировать",
+    "add": "Добавить"
+  }
+} 

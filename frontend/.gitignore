@@ -1,0 +1,7 @@
+node_modules/
+echo "dist" >> .gitignore
+echo ".next" >> .gitignore
+echo ".env" >> .gitignore
+echo ".DS_Store" >> .gitignore
+echo "*.log" >> .gitignore
+dist

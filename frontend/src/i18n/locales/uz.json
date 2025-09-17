@@ -1,0 +1,62 @@
+{
+  "dashboard": {
+    "title": "Dashboard",
+    "buyurtmalar_statistikasi": "Buyurtmalar statistikasi",
+    "buyurtmalar": "buyurtmalar",
+    "har_hafta": "Har hafta",
+    "har_oy": "Har oy",
+    "yillik": "Yillik"
+  },
+  "navigation": {
+    "dashboard": "Dashboard",
+    "leaderboard": "Liderlar",
+    "order": "Buyurtma",
+    "products": "Mahsulotlar",
+    "sales_report": "Savdo hisoboti",
+    "messages": "Xabarlar",
+    "settings": "Sozlamalar",
+    "sign_out": "Chiqish"
+  },
+  "sources": {
+    "telegram_bot": "Telegram bot",
+    "veb_sayt": "Veb-sayt",
+    "click": "Click",
+    "bot_yaratish": "Bot yaratish",
+    "veb_sayt_yaratish": "Veb-sayt yaratish",
+    "ariza_yuborish": "Ariza yuborish"
+  },
+  "stats": {
+    "total_sales": "Jami savdo",
+    "total_orders": "Jami buyurtmalar",
+    "customers": "Mijozlar",
+    "daily": "Kunlik",
+    "weekly": "Haftalik",
+    "monthly": "Oylik",
+    "yearly": "Yillik"
+  },
+  "top_products": {
+    "title": "Top 10 Mahsulotlar",
+    "interval": "Oraliq",
+    "kunlik": "Kunlik",
+    "haftalik": "Haftalik",
+    "oylik": "Oylik",
+    "yillik": "Yillik",
+    "dona_sotilgan": "dona sotilgan"
+  },
+  "header": {
+    "search_placeholder": "Qidiruv...",
+    "language": "Til",
+    "notifications": "Bildirishnomalar",
+    "profile": "Profil",
+    "admin": "Admin"
+  },
+  "common": {
+    "loading": "Yuklanmoqda...",
+    "error": "Xatolik yuz berdi",
+    "save": "Saqlash",
+    "cancel": "Bekor qilish",
+    "delete": "O'chirish",
+    "edit": "Tahrirlash",
+    "add": "Qo'shish"
+  }
+} 

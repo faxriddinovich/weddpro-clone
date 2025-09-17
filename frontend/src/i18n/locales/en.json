@@ -1,0 +1,62 @@
+{
+  "dashboard": {
+    "title": "Dashboard",
+    "buyurtmalar_statistikasi": "Order Statistics",
+    "buyurtmalar": "orders",
+    "har_hafta": "Weekly",
+    "har_oy": "Monthly",
+    "yillik": "Yearly"
+  },
+  "navigation": {
+    "dashboard": "Dashboard",
+    "leaderboard": "Leaderboard",
+    "order": "Order",
+    "products": "Products",
+    "sales_report": "Sales Report",
+    "messages": "Messages",
+    "settings": "Settings",
+    "sign_out": "Sign Out"
+  },
+  "sources": {
+    "telegram_bot": "Telegram Bot",
+    "veb_sayt": "Website",
+    "click": "Click",
+    "bot_yaratish": "Create Bot",
+    "veb_sayt_yaratish": "Create Website",
+    "ariza_yuborish": "Send Application"
+  },
+  "stats": {
+    "total_sales": "Total Sales",
+    "total_orders": "Total Orders",
+    "customers": "Customers",
+    "daily": "Daily",
+    "weekly": "Weekly",
+    "monthly": "Monthly",
+    "yearly": "Yearly"
+  },
+  "top_products": {
+    "title": "Top 10 Products",
+    "interval": "Interval",
+    "kunlik": "Daily",
+    "haftalik": "Weekly",
+    "oylik": "Monthly",
+    "yillik": "Yearly",
+    "dona_sotilgan": "units sold"
+  },
+  "header": {
+    "search_placeholder": "Search...",
+    "language": "Language",
+    "notifications": "Notifications",
+    "profile": "Profile",
+    "admin": "Admin"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add"
+  }
+} 
