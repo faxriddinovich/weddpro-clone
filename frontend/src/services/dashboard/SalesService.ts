@@ -22,8 +22,7 @@ interface OrderStats {
 export const getOrderStats = async (): Promise<OrderStats> => {
   try {
     const response = await api.get('/dashboard/order-stats/');
-    console.log('Raw order stats response:', response.data); // To'liq javobni ko'rish
-    if (!response.data || Object.values(response.data).every(arr => arr.length === 0)) {
+    if (!response.data || Object.values(response.data).every((arr:any[]) => arr.length === 0)) {
       console.warn('No data returned from /dashboard/order-stats/');
     }
     return response.data;

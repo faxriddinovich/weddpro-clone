@@ -10,10 +10,8 @@ const api = axios.create({
 api.interceptors.request.use(
   (config) => {
     const token = localStorage.getItem("auth_token");
-    console.log('Token:', token); // Debug log
     if (token) {
-      config.headers.Authorization = `Bearer ${token}`; // Backendga moslashtiring
-      console.log('Authorization header:', config.headers.Authorization); // Debug log
+      config.headers.Authorization = `Token ${token}`;
     } else {
       console.warn('Token topilmadi, so‘rov token holda yuborilmaydi');
     }
