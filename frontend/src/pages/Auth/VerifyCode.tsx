@@ -1,7 +1,7 @@
-import React, {useState, useRef, useEffect} from 'react';
-import {ArrowLeft, Send, CheckCircle, ExternalLink} from 'lucide-react';
-import {useNavigate, useLocation} from 'react-router-dom';
-import {verifyOTP, resendVerificationCode} from '@/services/authService';
+import React, {useRef, useState} from 'react';
+import {ArrowLeft, CheckCircle, ExternalLink, Send} from 'lucide-react';
+import {useLocation, useNavigate} from 'react-router-dom';
+import {resendVerificationCode, verifyOTP} from '@/services/authService';
 
 const VerifyCode = () => {
     const [code, setCode] = useState(['', '', '', '', '', '']);
@@ -106,13 +106,9 @@ const VerifyCode = () => {
 
     const openTelegramBot = () => {
         if (telegramAppLink) {
-            console.log('Trying Telegram app link:', telegramAppLink);
             window.location.href = telegramAppLink;
         } else {
-            const action = 'login' //location.pathname.includes('/verify-login') ? 'login' : 'register';
-            const fallbackLink = `tg://resolve?domain=weddProBot&start=${action}_${phoneNumber.replace(/\D/g, '')}`;
-            console.warn('No telegramAppLink, using fallback:', fallbackLink);
-            window.location.href = fallbackLink;
+            window.location.href = `tg://resolve?domain=weddProBot`;
         }
     };
 
