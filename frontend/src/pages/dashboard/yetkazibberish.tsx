@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+import {useToast} from "@/hooks/use-toast.ts";
 
 const deliveryMethods = [
   { id: "pickup", name: "Do‘kondan olib ketish", icon: "🏪" },
   { id: "courier", name: "Kuryer orqali yetkazish", icon: "🚚" },
   { id: "postomat", name: "Postomat orqali", icon: "📦" },
 ];
+const {toast} = useToast();
 
 const DeliveryForm = () => {
   const [selectedMethod, setSelectedMethod] = useState("courier");
@@ -27,7 +29,11 @@ const DeliveryForm = () => {
       ...formData,
       deliveryMethod: selectedMethod,
     });
-    alert("Ma'lumotlar yuborildi!");
+      toast({
+          title: "Amaliyot muvaffaqiyatli bajarildi",
+          description: "Ma'lumotlar yuborildi",
+          duration: 3000,
+      })
   };
 
   return (
