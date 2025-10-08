@@ -1,7 +1,8 @@
-import React, {useState, useRef, useEffect} from 'react';
-import {ArrowLeft, Send, CheckCircle, ExternalLink} from 'lucide-react';
-import {useNavigate, useLocation} from 'react-router-dom';
-import {verifyOTP, resendVerificationCode} from '@/services/authService';
+import React, {useRef, useState} from 'react';
+import {ArrowLeft, CheckCircle, ExternalLink, Send} from 'lucide-react';
+import {useLocation, useNavigate} from 'react-router-dom';
+import {resendVerificationCode, verifyOTP} from '@/services/authService';
+import {useToast} from "@/hooks/use-toast.ts";
 
 const VerifyCode = () => {
     const [code, setCode] = useState(['', '', '', '', '', '']);
@@ -13,6 +14,7 @@ const VerifyCode = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const {phoneNumber, username, telegramAppLink} = location.state || {};
+    const {toast} = useToast();
 
     const handleInputChange = (index: number, value: string) => {
         if (value.length > 1) return;
@@ -64,10 +66,19 @@ const VerifyCode = () => {
             if (response.token) {
                 localStorage.setItem('auth_token', response.token);
                 setTimeout(() => {
-                    alert('✅ Akkaunt muvaffaqiyatli tasdiqlandi!');
+                    toast({
+                        title: "Amaliyot muvaffaqiyatli bajarildi",
+                        description: "Akkaunt muvaffaqiyatli tasdiqlandi!",
+                        duration: 3000
+                    })
                 }, 100);
                 navigate('/', {replace: true});
             } else {
+                toast({
+                    title: "Xatolik",
+                    description: "Kodni tasdqilashda xatolik yuz berdi",
+                    duration: 3000
+                })
                 setError(response.message || 'Tasdiqlashda xatolik yuz berdi');
             }
         } catch (error: any) {
@@ -94,7 +105,11 @@ const VerifyCode = () => {
             const action = 'login' //location.pathname.includes('/verify-login') ? 'login' : 'register';
             const response = await resendVerificationCode(phoneNumber, action);
             if (response.success) {
-                alert('✅ Yangi kod yuborildi!');
+                toast({
+                    title: "Amaliyot muvaffaqiyatli bajarildi",
+                    description: '✅ Yangi kod yuborildi!',
+                    duration: 3000,
+                })
             }
         } catch (err: any) {
             console.error('Resend xatosi:', err);
@@ -106,13 +121,9 @@ const VerifyCode = () => {
 
     const openTelegramBot = () => {
         if (telegramAppLink) {
-            console.log('Trying Telegram app link:', telegramAppLink);
             window.location.href = telegramAppLink;
         } else {
-            const action = 'login' //location.pathname.includes('/verify-login') ? 'login' : 'register';
-            const fallbackLink = `tg://resolve?domain=weddProBot&start=${action}_${phoneNumber.replace(/\D/g, '')}`;
-            console.warn('No telegramAppLink, using fallback:', fallbackLink);
-            window.location.href = fallbackLink;
+            window.location.href = `tg://resolve?domain=weddProBot`;
         }
     };
 
